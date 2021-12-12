@@ -1,0 +1,234 @@
+All the other things I did and used before refactoring, for lesson purposes. 
+
+// const scienceCat = document.querySelector('.science');
+// const literatureCat = document.querySelector('.literature');
+// const historyCat = document.querySelector('.history');
+// const entertainmentCat = document.querySelector('.entertainment');
+// const generalCat = document.querySelector('.general');
+// const geographyCat = document.querySelector('.sports');
+// const answer1 = document.querySelector('.answer-1');
+// const answer2 = document.querySelector('.answer-2');
+// const answer3 = document.querySelector('.answer-3');
+// const answer4 = document.querySelector('.answer-4');
+
+// function getCategory() {
+//   let number = Array.from(btnContainer.children).map((a) => a.innerText);
+
+//   return number;
+
+//   // for (let i = 0; i < number.length; i++) {
+//   //   if (number[i].innerText === 'SCIENCE') return 17;
+//   //   if (number[i].innerText === 'LITERATURE') return 10;
+//   //   if (number[i].innerText === 'HISTORY') return 23;
+//   //   if (number[i].innerText === 'ENTERTAINMENT') return 14;
+//   //   if (number[i].innerText === 'GENERAL') return 9;
+//   //   if (number[i].innerText === 'GEOGRAPHY') return 22;
+//   // }
+
+//   // switch (number) {
+//   //   case 'SCIENCE':
+//   //     categoryNum = 17;
+
+//   //     break;
+
+//   //   default:
+//   //     break;
+//   // }
+
+//   // return categoryNum;
+
+//   // number.map((i) => {
+//   // console.log(i.innerText);
+//   // if (i.innerText === 'SCIENCE') return categoryNum = 17;
+//   // else if (i.innerText === 'LITERATURE') return 10;
+//   // else if (i.innerText === 'LITERATURE') return 10;
+//   // else if (i.innerText === 'LITERATURE') return 10;
+//   // else if (i.innerText === 'LITERATURE') return 10;
+//   // else (i.innerText === 'LITERATURE') return 10;
+//   // });
+//   // console.log(categoryNum);
+// }
+
+// console.log(getCategory());
+
+// questionContainer.addEventListener('click', function () {
+//   const right = shuffled.find((el) => el === rAnswer);
+
+//   allAnsArr.forEach((el) => {
+//     // console.log(el);
+//     if (el.textContent === right) {
+//       el.classList.add('green');
+//     } else {
+//       el.classList.add('red');
+//     }
+//   });
+// });
+
+// scienceCat.addEventListener('click', function () {
+//   let categoryNum = scienceCat.dataset.category;
+//   fetch(`https://opentdb.com/api.php?amount=1&category=${categoryNum}`)
+//     .then((res) => res.json())
+//     .then((data) => {
+//       let iAnswers = data.results[0].incorrect_answers;
+//       let rAnswer = Array.from(data.results[0].correct_answer).join('');
+//       let all = iAnswers.concat(rAnswer);
+
+//       function shuffle(array) {
+//         let currentIndex = array.length,
+//           randomIndex;
+//         // While there remain elements to shuffle...
+//         while (currentIndex != 0) {
+//           // Pick a remaining element...
+//           randomIndex = Math.floor(Math.random() * currentIndex);
+//           currentIndex--;
+//           // And swap it with the current element.
+//           [array[currentIndex], array[randomIndex]] = [
+//             array[randomIndex],
+//             array[currentIndex],
+//           ];
+//         }
+//         return array;
+//       }
+
+//       question.textContent = data.results[0].question;
+
+//       // const qDiv = document.createElement('div');
+//       // const qContent = document.createTextNode(data.results[0].question);
+//       // question.insertAdjacentHTML('beforebegin', data.results[0].question);
+//       // qDiv.appendChild(qContent);
+//       // document.body.insertAdjacentHTML(question, qDiv);
+
+//       let answersArr = shuffle(all).forEach((a) => console.log(allAnsArr));
+//       // answer1.innerHTML = answersArr[0];
+//       // answer2.innerHTML = answersArr[1];
+//       // answer3.innerHTML = answersArr[2];
+//       // answer4.innerHTML = answersArr[3];
+
+//       answersArr.forEach((a, i) => {
+//         console.log(a, i);
+//         allAnsArr.textContent = a;
+//       });
+
+//       for (let i = 0; i < answersArr.length; i++) {
+//         allAnsArr.textContent = answersArr[i];
+//         console.log(allAnsArr.textContent);
+//       }
+
+//       // console.log(answersArr);
+//       // console.log(data.results[0].correct_answer);
+//       // let answersArr = data.results[0].incorrect_answers;
+//       // answer1.innerHTML = answersArr[0];
+//       // answer2.innerHTML = answersArr[1];
+//       // answer3.innerHTML = answersArr[2];
+//       // answer4.innerHTML = data.results[0].correct_answer;
+//       // questionContainer.addEventListener('click', function () {
+//       //   const right = answersArr.find((e) => e === rAnswer);
+//       //   console.log(right);
+
+//       // answer4.style.backgroundColor = 'rgb(68, 136, 66)';
+//       // answer3.style.backgroundColor = 'rgb(168, 41, 41)';
+//       // answer2.style.backgroundColor = 'rgb(168, 41, 41)';
+//       // answer1.style.backgroundColor = 'rgb(168, 41, 41)';
+//       // });
+//     });
+// });
+
+// literatureCat.addEventListener('click', function () {
+//   let categoryNum = literatureCat.dataset.category;
+//   fetch(`https://opentdb.com/api.php?amount=1&category=${categoryNum}`)
+//     .then((res) => res.json())
+//     .then((data) => {
+//       question.innerHTML = data.results[0].question;
+//       let answersArr = data.results[0].incorrect_answers;
+//       answer1.innerHTML = answersArr[0];
+//       answer2.innerHTML = answersArr[1];
+//       answer3.innerHTML = answersArr[2];
+//       answer4.innerHTML = data.results[0].correct_answer;
+//       questionContainer.addEventListener('click', function () {
+//         answer4.style.backgroundColor = 'rgb(68, 136, 66)';
+//         answer3.style.backgroundColor = 'rgb(168, 41, 41)';
+//         answer2.style.backgroundColor = 'rgb(168, 41, 41)';
+//         answer1.style.backgroundColor = 'rgb(168, 41, 41)';
+//       });
+//     });
+// });
+
+// historyCat.addEventListener('click', function () {
+//   let categoryNum = historyCat.dataset.category;
+//   fetch(`https://opentdb.com/api.php?amount=1&category=${categoryNum}`)
+//     .then((res) => res.json())
+//     .then((data) => {
+//       question.innerHTML = data.results[0].question;
+//       let answersArr = data.results[0].incorrect_answers;
+//       answer1.innerHTML = answersArr[0];
+//       answer2.innerHTML = answersArr[1];
+//       answer3.innerHTML = answersArr[2];
+//       answer4.innerHTML = data.results[0].correct_answer;
+//       questionContainer.addEventListener('click', function () {
+//         answer4.style.backgroundColor = 'rgb(68, 136, 66)';
+//         answer3.style.backgroundColor = 'rgb(168, 41, 41)';
+//         answer2.style.backgroundColor = 'rgb(168, 41, 41)';
+//         answer1.style.backgroundColor = 'rgb(168, 41, 41)';
+//       });
+//     });
+// });
+
+// entertainmentCat.addEventListener('click', function () {
+//   let categoryNum = entertainmentCat.dataset.category;
+//   fetch(`https://opentdb.com/api.php?amount=1&category=${categoryNum}`)
+//     .then((res) => res.json())
+//     .then((data) => {
+//       question.innerHTML = data.results[0].question;
+//       let answersArr = data.results[0].incorrect_answers;
+//       answer1.innerHTML = answersArr[0];
+//       answer2.innerHTML = answersArr[1];
+//       answer3.innerHTML = answersArr[2];
+//       answer4.innerHTML = data.results[0].correct_answer;
+//       questionContainer.addEventListener('click', function () {
+//         answer4.style.backgroundColor = 'rgb(68, 136, 66)';
+//         answer3.style.backgroundColor = 'rgb(168, 41, 41)';
+//         answer2.style.backgroundColor = 'rgb(168, 41, 41)';
+//         answer1.style.backgroundColor = 'rgb(168, 41, 41)';
+//       });
+//     });
+// });
+
+// generalCat.addEventListener('click', function () {
+//   let categoryNum = generalCat.dataset.category;
+//   fetch(`https://opentdb.com/api.php?amount=1&category=${categoryNum}`)
+//     .then((res) => res.json())
+//     .then((data) => {
+//       question.innerHTML = data.results[0].question;
+//       let answersArr = data.results[0].incorrect_answers;
+//       answer1.innerHTML = answersArr[0];
+//       answer2.innerHTML = answersArr[1];
+//       answer3.innerHTML = answersArr[2];
+//       answer4.innerHTML = data.results[0].correct_answer;
+//       questionContainer.addEventListener('click', function () {
+//         answer4.style.backgroundColor = 'rgb(68, 136, 66)';
+//         answer3.style.backgroundColor = 'rgb(168, 41, 41)';
+//         answer2.style.backgroundColor = 'rgb(168, 41, 41)';
+//         answer1.style.backgroundColor = 'rgb(168, 41, 41)';
+//       });
+//     });
+// });
+
+// geographyCat.addEventListener('click', function () {
+//   let categoryNum = geographyCat.dataset.category;
+//   fetch(`https://opentdb.com/api.php?amount=1&category=${categoryNum}`)
+//     .then((res) => res.json())
+//     .then((data) => {
+//       question.innerHTML = data.results[0].question;
+//       let answersArr = data.results[0].incorrect_answers;
+//       answer1.innerHTML = answersArr[0];
+//       answer2.innerHTML = answersArr[1];
+//       answer3.innerHTML = answersArr[2];
+//       answer4.innerHTML = data.results[0].correct_answer;
+//       questionContainer.addEventListener('click', function () {
+//         answer4.style.backgroundColor = 'rgb(68, 136, 66)';
+//         answer3.style.backgroundColor = 'rgb(168, 41, 41)';
+//         answer2.style.backgroundColor = 'rgb(168, 41, 41)';
+//         answer1.style.backgroundColor = 'rgb(168, 41, 41)';
+//       });
+//     });
+// });

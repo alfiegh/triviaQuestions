@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  padding: 1rem;
+  background: #003366;
+}
+
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 95vh;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid rgb(222, 153, 55);
+}
+
+h1 {
+  padding: 1rem;
+  border: 3px solid rgb(222, 153, 55);
+  border-radius: 10px;
+  color: rgb(222, 153, 55);
+  box-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px black;
+  margin: 0;
+}
+
+button {
+  background: none;
+  padding: 1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  border: none;
+  box-shadow: 2px 2px 3px black;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 'science literature' 'history entertainment' ' general sports';
+  gap: 10px;
+}
+
+hr {
+  width: 90%;
+  height: 5px;
+  background: rgb(222, 153, 55);
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.question-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: 'question' 'answer-1' 'answer-2' 'answer-3' 'answer-4';
+  gap: 5px;
+  width: 90%;
+  height: calc(50%);
+}
+
+.question {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+  color: rgb(238, 236, 236);
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1.3px 1.3px 2px black;
+}
+
+.answer-1,
+.answer-2,
+.answer-3,
+.answer-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  border-radius: 10px;
+  /* border: 1px dotted grey; */
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-shadow: 1.5px 1.5px 3px black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.science {
+  background: rgb(95, 159, 69);
+  text-shadow: 1px 1px 2px black;
+}
+
+.literature {
+  background: rgb(168, 41, 41);
+  text-shadow: 1px 1px 2px black;
+}
+
+.history {
+  background: rgb(179, 179, 52);
+  text-shadow: 1px 1px 2px black;
+}
+
+.entertainment {
+  background: rgb(196, 13, 128);
+  text-shadow: 1px 1px 2px black;
+}
+
+.general {
+  background: rgb(26, 135, 207);
+  text-shadow: 1px 1px 2px black;
+}
+
+.sports {
+  background: rgb(220, 147, 50);
+  text-shadow: 1px 1px 2px black;
+}
+
+.green {
+  background-color: rgb(68, 136, 66);
+}
+
+.red {
+  background-color: rgb(168, 41, 41);
+}
+
+.bgnone {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.loading {
+  background: url('./loadingDots.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 10vh;
+
+  /* height: 100vh; */
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="app-container">
+      <h1>TRIVIAL PURSUIT</h1>
+      <div class="btn-container">
+        <button class="category science" data-category="17">Science</button>
+        <button class="category literature" data-category="10">
+          Literature
+        </button>
+        <button class="category history" data-category="23">History</button>
+        <button class="category entertainment" data-category="14">
+          Entertainment
+        </button>
+        <button class="category general" data-category="9">General</button>
+        <button class="category sports" data-category="22">Geography</button>
+      </div>
+      <hr />
+      <div class="question-container">
+        <div class="question"></div>
+        <div class="answer-1 answer truefalse" id="answer"></div>
+        <div class="answer-2 answer truefalse" id="answer"></div>
+        <div class="answer-3 answer" id="answer"></div>
+        <div class="answer-4 answer" id="answer"></div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

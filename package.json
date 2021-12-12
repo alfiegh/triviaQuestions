@@ -1,0 +1,20 @@
+{
+  "homepage": "http://alfiegh.github.io/triviaQuestions",
+  "name": "trivia",
+  "version": "1.0.0",
+  "description": "trivia questions",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "trivia",
+    "trivial",
+    "pursuit",
+    "trivia",
+    "questions",
+    "game"
+  ],
+  "author": "Alfonso",
+  "license": "ISC"
+}
