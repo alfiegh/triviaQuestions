@@ -21,7 +21,7 @@ function shuffle(array) {
 }
 
 function clearAll() {
-  const list = ['red', 'green'];
+  const list = ['red', 'green', 'clicked'];
   question.innerHTML = '';
   allAnsArr.forEach((el) => {
     el.classList.remove(...list);
@@ -74,7 +74,7 @@ btnContainer.addEventListener('click', function (e) {
         }
       });
 
-      questionContainer.addEventListener('click', function () {
+      questionContainer.addEventListener('click', function (e) {
         //find right answer within array
         const right = shuffled.find((el) => el === decodedAnswer);
 
@@ -90,6 +90,7 @@ btnContainer.addEventListener('click', function (e) {
             el.classList.add('red');
           }
         });
+        e.target.classList.add('clicked');
       });
     });
   clearAll();

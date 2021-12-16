@@ -93,6 +93,7 @@ hr {
   text-transform: uppercase;
   text-shadow: 1.5px 1.5px 3px black;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
 }
 
 .science {
@@ -143,6 +144,8 @@ hr {
   background-position: center;
   background-size: contain;
   height: 10vh;
+}
 
-  /* height: 100vh; */
+.clicked {
+  border: 2px solid white !important;
 }
