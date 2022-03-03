@@ -43,8 +43,6 @@ function removeLoading() {
   question.classList.remove('loading');
 }
 
-// let loading = `<div class="loading"></div>`;
-
 btnContainer.addEventListener('click', function (e) {
   addLoading();
   let categoryNum = e.target.dataset.category;
@@ -99,3 +97,5 @@ btnContainer.addEventListener('click', function (e) {
 //if you want to change/add categories, check the API documentation -> https://opentdb.com/api_config.php
 //Get category number from the documentation and replace in the HTML file <button data-category='${your chosen cat here}'>...</button>
 //If you want to add a category just do the same as prev step but create a new button.
+
+//There's also an intentional bug. If you click the question when an asnwer is displayed it will show you the right answer! Easy fix.
